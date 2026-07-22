@@ -670,3 +670,123 @@ body.light .welcome-title {
   50% { transform: translateY(-8px); }
   100% { transform: translateY(0px); }
 }
+
+.form-grid-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* ==========================================================================
+   Mobile & Tablet Responsiveness (PWA & Web layouts)
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  /* Stack the Triage Console and Graph Visualizer vertically */
+  .dashboard-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* App container margins */
+  .app-container {
+    padding: 0.75rem;
+    gap: 1.25rem;
+  }
+
+  /* Header adjustments */
+  header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+    padding: 1rem !important;
+  }
+  
+  header > div:first-child {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+  }
+
+  header > div:last-child {
+    width: 100% !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+
+  /* Welcome Screen mobile scaling */
+  .welcome-card {
+    padding: 2rem 1.25rem;
+    gap: 1.25rem;
+  }
+  .welcome-title {
+    font-size: 2.2rem;
+  }
+  .welcome-subtitle {
+    font-size: 0.95rem;
+  }
+  .welcome-description {
+    font-size: 0.85rem;
+  }
+
+  /* Form columns stack */
+  .form-grid-row {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Tabs navigation scrolls horizontally on mobile */
+  .tabs-navigation {
+    display: flex !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    padding: 0.25rem !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.25rem !important;
+  }
+  .tab-trigger {
+    flex: 1 0 auto !important;
+    padding: 0.5rem 0.85rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* KPICards stack on mobile */
+  .kpi-row {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+  
+  /* Law book portal filters */
+  .filters-container {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.75rem !important;
+  }
+  .search-input {
+    width: 100% !important;
+  }
+  
+  /* Resource Allocator layout */
+  .resource-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Dispatch pass details spacing */
+  .ticket-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.25rem !important;
+  }
+  .ticket-value {
+    text-align: left !important;
+    width: 100% !important;
+  }
+  
+  /* Drawer settings width */
+  .drawer-content {
+    width: 100% !important;
+    border-radius: 0 !important;
+  }
+}
