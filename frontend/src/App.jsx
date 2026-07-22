@@ -26,6 +26,7 @@ export default function App() {
   const [category, setCategory] = useState('')
   const [loading, setLoading] = useState(false)
   const [stats, setStats] = useState({ totalProcessed: 0 })
+  const [hasEntered, setHasEntered] = useState(false)
 
   // Toggle Theme
   const handleToggleTheme = () => {
@@ -187,6 +188,35 @@ export default function App() {
       console.error(err)
       alert('Error updating API Key settings.')
     }
+  }
+
+  if (!hasEntered) {
+    return (
+      <div className="welcome-container">
+        <div className="glass-panel welcome-card">
+          <div className="welcome-logo-glow">
+            ⚖️
+          </div>
+          <h1 className="welcome-title">NyayaAI</h1>
+          <p className="welcome-subtitle">Agentic Legal Aid & Emergency Dispatch System</p>
+          
+          <div className="welcome-sdg-badge">
+            <span>UN Sustainable Development Goal 16</span>
+            <strong>Peace, Justice & Strong Institutions</strong>
+          </div>
+          
+          <p className="welcome-description">
+            NyayaAI is an autonomous agentic AI system built with LangGraph to classification-route civil disputes, 
+            provide dynamic RAG-based real Indian law citations, allocate pro-bono lawyers, and invoke deterministic safety overrides 
+            for immediate police dispatch in crises.
+          </p>
+          
+          <button onClick={() => setHasEntered(true)} className="btn btn-primary welcome-enter-btn">
+            Launch Triage Console
+          </button>
+        </div>
+      </div>
+    )
   }
 
   return (
