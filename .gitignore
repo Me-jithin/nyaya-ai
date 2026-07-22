@@ -1,0 +1,33 @@
+# Python virtual environments & dependencies
+backend/.venv/
+backend/venv/
+backend/env/
+backend/ENV/
+
+# Python caching & compiled files
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+# Node.js dependencies
+frontend/node_modules/
+**/node_modules/
+
+# Production build outputs
+frontend/dist/
+frontend/build/
+
+# Environment configurations and secret API keys (CRITICAL)
+backend/.env
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.production.local
+frontend/.env.test.local
+
+# Operating System specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
